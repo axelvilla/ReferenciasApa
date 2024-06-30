@@ -1,0 +1,36 @@
+{% extends './layout.html' %}
+
+{% block form_action%}
+
+<form action="" method="post" class="form col-5 mt-4">
+    <div class="mb-3 grid gap-3">
+        <label for="" class="form-label p-2 g-col-6">Apellido del autor</label>
+        <input type="text" name="Apellido" class="form-control">
+
+        <label for="" class="form-label p-1 g-col-6">Nombre del autor</label>
+        <input type="text" name="Nombre" class="form-control">
+
+        <label for="" class="form-label p-2 g-col-6">Año</label>
+        <input type="number" name="Anio" class="form-control">
+
+        <label for="" class="form-label p-2 g-col-6">Titulo</label>
+        <input type="text" name="Titulo" class="form-control">
+
+        <label for="" class="form-label p-2 g-col-6">Editorial o URL</label>
+        <input type="text" name="Editorial" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Generar</button>
+</form>
+
+{%endblock%}
+
+{% block output %}
+    <div class="col-7 mt-5 ml-5">
+        <h1>Información del Libro</h1>
+    <p>Apellido del autor: {{ data['apellido'] }}</p>
+    <p>Nombre del autor: {{ data['nombre'] }}</p>
+    <p>Año de publicación: {{ data['anio'] }}</p>
+    <p>Título del libro: {{ data['titulo'] }}</p>
+    <p>Editorial: {{ data['editorial'] }}</p>
+    </div> 
+{%endblock%}
