@@ -26,8 +26,12 @@
         <input type="text" name="Titulo" class="form-control">
     </div>
     <div class="col-md-4">
-        <label for="" class="form-label p-2 g-col-6">Editorial o URL</label>
+        <label for="" class="form-label p-2 g-col-6">Editorial</label>
         <input type="text" name="Editorial" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <label for="" class="form-label p-2 g-col-6">URL</label>
+        <input type="text" name="url" class="form-control">
     </div>
     </div>
     <button type="submit" class="btn btn-primary">Generar</button>
@@ -38,6 +42,6 @@
 {% block output %}
     <div class="col-7 mt-5 ml-5">
         <h1>Bibliografia</h1>
-        <p>{{ data['apellido'] }}. {{ data['nombre'] }}. {{ data['anio'] }}. <span class="fst-italic">{{ data['titulo'] }}</span>. {{ data['editorial'] }}</p>
+        <p>{{ data['apellido'] }}. {{ data['nombre'] }}. {{ data['anio'] }}. <span class="fst-italic">{{ data['titulo'] }}</span>. {{ data['editorial'] }}. {{ data['url'] }}</p>
     </div> 
 {%endblock%}

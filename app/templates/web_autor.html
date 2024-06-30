@@ -8,6 +8,8 @@
 
 {% block form_action%}
 
+
+
 <form action="" method="post" class="row g-3 mt-0">
     <div class="col-md-4">
         <label for="" class="form-label p-2 g-col-6">Apellido del autor</label>
@@ -18,16 +20,20 @@
         <input type="text" name="Nombre" class="form-control">
     </div>
     <div class="col-md-4">
-        <label for="" class="form-label p-2 g-col-6">Año</label>
-        <input type="number" name="Anio" class="form-control">
+        <label for="" class="form-label p-2 g-col-6">Fecha</label>
+        <input type="date" name="fecha" class="form-control">
     </div>
     <div class="col-md-4">
-        <label for="" class="form-label p-2 g-col-6">Titulo</label>
+        <label for="" class="form-label p-2 g-col-7">Titulo</label>
         <input type="text" name="Titulo" class="form-control">
     </div>
     <div class="col-md-4">
-        <label for="" class="form-label p-2 g-col-6">Editorial o URL</label>
-        <input type="text" name="Editorial" class="form-control">
+        <label for="" class="form-label p-2 g-col-7">Nombre del Sitio</label>
+        <input type="text" name="nombreSitio" class="form-control">
+    </div>
+    <div class="col-md-4">
+        <label for="" class="form-label p-2 g-col-7">URL</label>
+        <input type="text" name="url" class="form-control">
     </div>
     </div>
     <button type="submit" class="btn btn-primary">Generar</button>
@@ -36,8 +42,8 @@
 {%endblock%}
 
 {% block output %}
-    <div class="col-7 mt-5 ml-5">
+    <div class="mt-5 ml-5 col-7">
         <h1>Bibliografia</h1>
-        <p>{{ data['apellido'] }}. {{ data['nombre'] }}. {{ data['anio'] }}. <span class="fst-italic">{{ data['titulo'] }}</span>. {{ data['editorial'] }}</p>
+        <p>{{ data['apellido'] }}. {{ data['nombre'] }}. {{ data['fecha'] }}. <span class="fst-italic">{{ data['titulo'] }}</span>. {{ data['nombreSitio'] }}. {{ data['url'] }}</p>
     </div> 
 {%endblock%}
