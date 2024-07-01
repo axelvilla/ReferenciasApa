@@ -21,14 +21,17 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Asegúrate de tener un requirements.txt con tus dependencias
+          pip install flask  # Instala Flask y otras dependencias necesarias aquí
 
-      - name: Run Flask application to generate static files
+      - name: Generate static files
         run: |
-          flask build  # Asume que tienes un comando para generar archivos estáticos
+          # Ejemplo: generar archivos HTML estáticos desde templates de Flask
+          python app/app.py  # Supongamos que tienes un script para generar archivos estáticos
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: /app  # Ruta donde se encuentran los archivos estáticos generados
+
+
