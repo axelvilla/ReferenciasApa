@@ -122,4 +122,4 @@ def video_internet():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run( debug=False)
